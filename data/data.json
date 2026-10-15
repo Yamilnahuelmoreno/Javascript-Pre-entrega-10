@@ -1,0 +1,7 @@
+[
+  { "id": 1, "nombre": "Teclado mecánico", "precio": 45000, "stock": 12 },
+  { "id": 2, "nombre": "Mouse inalámbrico", "precio": 22000, "stock": 30 },
+  { "id": 3, "nombre": "Monitor 24''", "precio": 180000, "stock": 5 },
+  { "id": 4, "nombre": "Auriculares Bluetooth", "precio": 38000, "stock": 18 },
+  { "id": 5, "nombre": "Webcam Full HD", "precio": 29000, "stock": 0 }
+]

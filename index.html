@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Stock — Simulador de Inventario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="panel-header">
+    <div class="panel-header__title">
+      <span class="panel-header__kicker">Inventario</span>
+      <h1>Panel de Stock</h1>
+    </div>
+    <p class="panel-header__count" id="contador-items">Cargando…</p>
+  </header>
+
+
+  <div id="banner-aviso" class="banner" role="status" aria-live="polite"></div>
+
+  <main class="layout">
+
+    <section class="card card--form" aria-label="Agregar producto">
+      <h2>Cargar producto</h2>
+      <form id="form-producto">
+        <div class="campo">
+          <label for="input-nombre">Nombre</label>
+          <input type="text" id="input-nombre" placeholder="Ej: Teclado mecánico" required>
+        </div>
+        <div class="campo">
+          <label for="input-precio">Precio</label>
+          <input type="number" id="input-precio" placeholder="Ej: 45000" min="0" required>
+        </div>
+        <div class="campo">
+          <label for="input-stock">Stock</label>
+          <input type="number" id="input-stock" placeholder="Ej: 10" min="0" required>
+        </div>
+        <button type="submit" class="btn btn--primario">+ Agregar</button>
+      </form>
+    </section>
+
+    <section class="card card--lista">
+      <div class="lista-header">
+        <h2>Stock actual</h2>
+        <input
+          type="text"
+          id="input-buscar"
+          class="buscador"
+          placeholder="Buscar por nombre…"
+          aria-label="Buscar producto por nombre"
+        >
+      </div>
+
+      <p id="estado-carga" class="estado-carga" role="status">Cargando productos…</p>
+
+      <ul id="contenedor-items" class="lista-items"></ul>
+
+      <p id="mensaje-vacio" class="estado-vacio">No hay productos para mostrar.</p>
+
+      <button type="button" id="btn-restablecer" class="btn-secundario">
+        Restablecer datos originales
+      </button>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
